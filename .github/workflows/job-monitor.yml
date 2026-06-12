@@ -33,4 +33,6 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
+
         run: python main.py
