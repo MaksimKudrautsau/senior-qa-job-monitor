@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42eacacf-f48f-4720-bdd4-15e0b0f8ef8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/job_search.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_telegram.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/ashby.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/greenhouse.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/lever.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/telegram_bot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +37,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "new__job"
   }
 }]]></component>
   <component name="RecentsManager">
