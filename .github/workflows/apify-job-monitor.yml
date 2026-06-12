@@ -1,12 +1,12 @@
-name: Senior QA Job Monitor
+name: Apify QA Job Monitor
 
 on:
   schedule:
-    - cron: "7,37 * * * *"
+    - cron: "0 16,2 * * *"
   workflow_dispatch:
 
 jobs:
-  run-job-monitor:
+  run-apify-job-monitor:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,10 +26,10 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: Run job monitor without Apify
+      - name: Run job monitor with Apify
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
-          RUN_APIFY: "false"
+          RUN_APIFY: "true"
         run: python main.py

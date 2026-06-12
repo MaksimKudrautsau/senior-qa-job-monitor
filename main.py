@@ -5,6 +5,7 @@ from filters import is_senior_qa_job
 from telegram_bot import send_telegram_message
 from sources.ashby import fetch_ashby_jobs
 from sources.apify_jobs import fetch_apify_jobs
+import os
 import re
 
 
@@ -32,7 +33,13 @@ def main():
     greenhouse_jobs = fetch_greenhouse_jobs()
     lever_jobs = fetch_lever_jobs()
     ashby_jobs = fetch_ashby_jobs()
-    apify_jobs = fetch_apify_jobs()
+    run_apify = os.getenv("RUN_APIFY", "false").lower() == "true"
+
+    if run_apify:
+        apify_jobs = fetch_apify_jobs()
+    else:
+        print("Skipping Apify for this run")
+        apify_jobs = []
     jobs = greenhouse_jobs + lever_jobs + ashby_jobs + apify_jobs
 
     possible_qa_jobs = [

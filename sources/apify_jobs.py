@@ -10,11 +10,7 @@ APIFY_ACTOR_ID = "orgupdate/google-jobs-scraper"
 APIFY_SEARCHES = [
     "Senior QA Engineer",
     "Senior QA Automation",
-    "Senior SDET",
-    "Senior Software Test Engineer",
-    "Senior Test Automation Engineer",
-    "QA Engineer",
-    "QA Automation Enginner"
+    "SDET"
 ]
 
 
@@ -104,7 +100,7 @@ def fetch_apify_jobs():
     for query in APIFY_SEARCHES:
         payload = {
             "query": query,
-            "maxItems": 20,
+            "maxItems": 10,
         }
 
         params = {
