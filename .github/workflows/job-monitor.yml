@@ -2,7 +2,7 @@ name: Senior QA Job Monitor
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "5,35 * * * *"
   workflow_dispatch:
 
 jobs:
