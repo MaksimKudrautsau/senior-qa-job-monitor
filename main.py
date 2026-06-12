@@ -4,16 +4,22 @@ from sources.lever import fetch_lever_jobs
 from filters import is_senior_qa_job
 from telegram_bot import send_telegram_message
 from sources.ashby import fetch_ashby_jobs
+from sources.apify_jobs import fetch_apify_jobs
 import re
 
 
 def format_job_message(job):
+    posted_date = job.get("posted_date") or "Unknown"
+    salary = job.get("salary") or "N/A"
+
     return f"""
 🚨 New Senior QA Job
 
 Title: {job["title"]}
 Company: {job["company"]}
 Location: {job["location"]}
+Posted: {posted_date}
+Salary: {salary}
 Source: {job["source"]}
 
 {job["url"]}
@@ -26,7 +32,8 @@ def main():
     greenhouse_jobs = fetch_greenhouse_jobs()
     lever_jobs = fetch_lever_jobs()
     ashby_jobs = fetch_ashby_jobs()
-    jobs = greenhouse_jobs + lever_jobs + ashby_jobs
+    apify_jobs = fetch_apify_jobs()
+    jobs = greenhouse_jobs + lever_jobs + ashby_jobs + apify_jobs
 
     possible_qa_jobs = [
         job for job in jobs
@@ -53,6 +60,7 @@ def main():
     print(f"Ashby jobs: {len(ashby_jobs)}")
     print(f"Fetched {len(jobs)} jobs")
     print(f"Matched {len(matched_jobs)} jobs")
+    print(f"Apify jobs: {len(apify_jobs)}")
 
     new_jobs_count = 0
 
