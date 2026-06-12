@@ -2,7 +2,7 @@ name: Senior QA Job Monitor
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "7,37 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Print run time
+        run: date -u
 
       - name: Restore jobs database cache
         uses: actions/cache@v4
@@ -34,5 +37,4 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           APIFY_API_TOKEN: ${{ secrets.APIFY_API_TOKEN }}
-
         run: python main.py
