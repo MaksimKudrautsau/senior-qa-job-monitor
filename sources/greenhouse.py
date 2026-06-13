@@ -2,16 +2,73 @@ import requests
 
 
 GREENHOUSE_COMPANIES = {
+    # Big tech / AI / data
     "Databricks": "databricks",
     "Cloudflare": "cloudflare",
     "Stripe": "stripe",
     "Figma": "figma",
     "Discord": "discord",
-    "Checkr": "checkr",
+    "Anthropic": "anthropic",
+    "Scale AI": "scaleai",
+    "Airtable": "airtable",
+    "Asana": "asana",
+    "Dropbox": "dropbox",
+    "Box": "boxinc",
+    "Webflow": "webflow",
+
+    # Fintech / payments / business software
     "Chime": "chime",
-    "Nextdoor": "nextdoor",
+    "Brex": "brex",
+    "Robinhood": "robinhood",
+    "Coinbase": "coinbase",
+    "Affirm": "affirm",
+    "Credit Karma": "creditkarma",
+    "Mercury": "mercury",
+    "Rippling": "rippling",
+    "Gusto": "gusto",
+    "Checkr": "checkr",
+
+    # Delivery / marketplace / consumer
     "Instacart": "instacart",
-    "Samsara": "samsara"
+    "Lyft": "lyft",
+    "Airbnb": "airbnb",
+    "Nextdoor": "nextdoor",
+    "Reddit": "reddit",
+    "Pinterest": "pinterest",
+    "TaskRabbit": "taskrabbit",
+
+    # Security / infra / dev tools
+    "Samsara": "samsara",
+    "Okta": "okta",
+    "Twilio": "twilio",
+    "Fastly": "fastly",
+    "Elastic": "elastic",
+    "MongoDB": "mongodb",
+    "Cockroach Labs": "cockroachlabs",
+    "LaunchDarkly": "launchdarkly",
+    "Tailscale": "tailscale",
+    "Tanium": "tanium",
+
+    # Media / ads / entertainment
+    "Roku": "roku",
+    "The Trade Desk": "thetradedesk",
+    "Moloco": "moloco",
+
+    # Health / biotech / robotics / hardware
+    "Nuro": "nuro",
+    "Waymo": "waymo",
+    "Anduril": "andurilindustries",
+    "Verkada": "verkada",
+    "Natera": "natera",
+
+    # More SaaS / enterprise
+    "Amplitude": "amplitude",
+    "Calendly": "calendly",
+    "Intercom": "intercom",
+    "Lattice": "lattice",
+    "Culture Amp": "cultureamp",
+    "Udemy": "udemy",
+    "Coursera": "coursera",
 }
 
 

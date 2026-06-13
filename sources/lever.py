@@ -2,7 +2,9 @@ import requests
 
 
 LEVER_COMPANIES = {
-    "Netflix": "netflix"
+    "Netflix": "netflix",
+    "Medium": "medium",
+    "Color": "color"
 }
 
 
